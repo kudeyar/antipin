@@ -1,0 +1,28 @@
+<h2><font color="#6d6d6d">Контактная информация</font></h2>
+<br />
+<div><a href="#" class="schema1" title="Схема проезда: Невинномысск">Схема проезда г. Невинномысск</a></div>
+<font style="display: none; margin-left: 70px;" class="nevinka">
+<script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=jnnxrJkul8aTMqORkOtbpn3RT0r2gOCC&width=600&height=450"></script>
+</font>
+<div><a href="#" class="schema2" title="Схема проезда: Ставрополь">Схема проезда г. Ставрополь</a></div>
+<font style="display: none; margin-left: 70px;" class="stav">
+<script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=Tuuk_NEr88KuH6T0sNGjZ4YoQFWAVWHp&width=600&height=450"></script>
+</font>
+<div class="contact-form"></div>
+
+<script>
+    $.get('/index/contact/', function(data) {
+        $('.contact-form').html(data);
+    });
+
+    $('.schema1').click(function() {
+        $('.nevinka').slideToggle()
+                .siblings("font:visible").slideUp("slow");
+        return false;
+    })
+    $('.schema2').click(function() {
+        $('.stav').slideToggle()
+                .siblings("font:visible").slideUp("slow");
+        return false;
+    })
+</script>

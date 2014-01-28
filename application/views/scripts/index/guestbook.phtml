@@ -1,0 +1,51 @@
+<h2><font color="#6d6d6d">Отзывы о работе</font></h2>
+<div class="added" style="display: none;"><pre class="text-success">КОММЕНТАРИЙ ДОБАВЛЕН!</pre></div>
+<div class="comment-block">
+</div>
+<hr />
+<h3 style="text-align: center;">Оставьте свой отзыв</h3>
+<form method="post">
+    <table style="margin: 20px auto;">
+        <tr><td style="padding: 3px;">Ваше имя:</td><td><input id="username" type="text" size="48" required name="name"></td></tr>
+        <tr><td valign="top" style="padding: 3px;">Отзыв:</td><td><textarea cols="50" rows="5" name="comment" required id="usercomment"></textarea></td></tr>
+        <tr><td colspan="2" align="center"><button type="submit" class="add_comment btn">Добавить</button></td></tr>
+    </table>
+</form>
+
+
+
+
+<script>
+    var params = {};
+
+    function updateBook()
+    {
+        $.get('/index/comments/', params, function(data) {
+            $('.comment-block').html(data);
+            $('.table').css("display", "none");
+            $('.table').fadeIn('fast');
+        });
+    }
+    
+    $('.add_comment').click(function(){
+        name = $('#username').val();
+        comment = $('#usercomment').val();
+        if (name == '' || comment == ''){
+            exit;
+        }
+        params.name = name;
+        params.comment = comment;
+        params.add = 1;
+        $.get('/index/comments/add', params, function(data) {
+            $('.comment-block').html(data);
+        })
+        $('.added').slideToggle().delay(3000).slideToggle();
+        $('#username').val("");
+        $('#usercomment').val("");
+        $('html, body').animate({scrollTop: 0}, 'slow');
+        return false;
+    })
+    updateBook();
+
+
+</script>

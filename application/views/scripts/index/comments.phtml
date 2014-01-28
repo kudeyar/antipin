@@ -1,0 +1,7 @@
+<?php foreach ($this->entries as $entry): ?>
+    <div class="comment_text">
+        <h2 class="comment_author"><?= $entry['name']; ?></h2>
+        <?= $entry['comment']; ?>
+    </div>
+    <div class="comment_date"><?= date('d.m.Y H:i:s', strtotime($entry['created'])); ?></div>
+<?php endforeach; ?>

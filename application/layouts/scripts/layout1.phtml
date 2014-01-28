@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <?php echo $this->headLink()->appendStylesheet('/css/style.css') ?>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <title>Психолог Антипин Анатолий Иванович</title>
+
+    </head>
+
+    <body>
+        <div class="for_menu">
+            <div class="menu">
+                <div class="service"><a href="<?php
+                    echo $this->url(
+                            array(
+                        'controller' => 'index',
+                        'action' => 'services'
+                            ), 'default', true)
+                    ?>">Услуги111</a></div>
+                <div class="contacts"><a href="<?php
+                    echo $this->url(
+                            array(
+                        'controller' => 'index',
+                        'action' => 'contacts'
+                            ), 'default', true)
+                    ?>">Контакты</a></div>
+                <div class="about"><a href="<?php
+                    echo $this->url(
+                            array(
+                        'controller' => 'index',
+                        'action' => 'about'
+                            ), 'default', true)
+                    ?>">Обо мне</a></div>
+                <div class="review"><a href="<?php
+                    echo $this->url(
+                            array(
+                        'controller' => 'index',
+                        'action' => 'guestbook'
+                            ), 'default', true)
+                    ?>">Отзывы</a></div>
+
+            </div>
+            <div class="container">
+
+                <div class="header">
+
+                    <div class="head_phone">
+                        <table>
+                            <tr>
+                                <td>
+                            <center><span style="font-size: 16pt;">+7(903) </span><b>440-440-5</b></center>
+                            </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <a href="/"><div class="logo"></div></a>
+
+                    <div class="head_text">
+                        <table>
+                            <tr><td><h3>Психолог-консультант</h3></td></tr>
+                            <tr><td><h5>Психологическое консультирование и коррекция</h5></td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="content">
+
+                    <?php echo $this->layout()->content ?>
+
+                </div>
+
+                <div class="footer">
+                    &copy psiholog-antipin.ru 2013 г.
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Психолог Антипин Анатолий Иванович</title>
+        <?php echo $this->headLink()->appendStylesheet('/css/style.css') ?>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="/js/jquery-1.10.2.min.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <!-- #header -->
+            <div id="header">
+                <div class="logo">
+                    <a href="/">
+                        <table>
+                            <tr><td><h3 style="margin: 0px;">Антипин</h3></td></tr>
+                            <tr><td><h5>Анатолий Иванович</h5></td></tr>
+                        </table>
+                    </a>
+                </div>
+                <div class="author">
+                    <table>
+                        <tr><td><h3 style="margin: 0px;">Психолог-консультант</h3></td></tr>
+                        <tr><td><h5>Психологическое консультирование и коррекция</h5></td></tr>
+                    </table>
+                </div>
+            </div>
+            <!-- / #header -->
+            <div id="navcontainer">
+                <ul id="navlist">
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="<?php
+                        echo $this->url(
+                                array(
+                            'controller' => 'index',
+                            'action' => 'about'
+                                ), 'default', true)
+                        ?>">Обо мне</a></li>
+                    <li><a href="<?php
+                        echo $this->url(
+                                array(
+                            'controller' => 'index',
+                            'action' => 'answer'
+                                ), 'default', true)
+                        ?>">Вопрос-ответ</a></li>
+                    <li><a href="<?php
+                        echo $this->url(
+                                array(
+                            'controller' => 'index',
+                            'action' => 'guestbook'
+                                ), 'default', true)
+                        ?>">Отзывы</a></li>
+                    <li><a href="<?php
+                        echo $this->url(
+                                array(
+                            'controller' => 'index',
+                            'action' => 'contacts'
+                                ), 'default', true)
+                        ?>">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="headerPic"><img src="../img/headerBackground.jpg" alt="Header picture" width="800" height="269" /></div>
+            <!-- #mainContent -->
+            <div id="mainContent">
+                <div class="copyrightTemplate">
+                    <?php echo $this->layout()->content ?>
+                </div>
+            </div>
+            <div class="clearer"></div>
+            <!-- / #mainContent -->
+            <!-- #footer -->
+            <div id="footer">
+                <div class="fcenter">
+                    <div class="fleft"><p>&copy; <a href="/">psiholog-antipin.ru</a> 2013 г.</p></div>
+                    <div class="arrow_up">
+                        <a href="#"><img src="../img/arrow_up.png" class="up" title="Наверх"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- / #footer -->
+        </div>
+    </body>
+</html>
+
+<script>
+    $('.up').on('click', function() {
+        $('html, body').animate({scrollTop: 0}, 'slow');
+    });
+
+
+    $(document).ready(function() {
+        var link = window.location.pathname;
+        $('#navlist li a[href="' + link + '"]').parent().addClass('active');
+    });
+</script>
