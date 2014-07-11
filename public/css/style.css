@@ -3,7 +3,14 @@
 .fright  {float:right}
 .fcenter {float:none;margin:0 auto;width:96%}
 .fclear {clear:both}
-body {font-family:Arial,Helvetica,sans-serif;font-size:12px;background:#343434;color:#343434}
+body {font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#343434;
+  background-image: url(/img/background-photo.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color:#464646;
+}
 a {color:#343434;text-decoration:underline}
 a:hover {color:#343434;text-decoration:none}
 #container {width:800px;margin:0 auto;background:#cfcec9}
