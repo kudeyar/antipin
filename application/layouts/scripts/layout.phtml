@@ -3,6 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="shortcut icon" href="/img/icon.ico" >
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab&subset=cyrillic,cyrillic-ext,latin' rel='stylesheet' type='text/css'>
         <title>Психолог Антипин Анатолий Иванович</title>
         <?php echo $this->headLink()->appendStylesheet('/css/style.css') ?>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -14,6 +15,7 @@
             <div id="header">
                 <div class="logo">
                     <a href="/" style="text-decoration: none;">
+                        <img src="/img/logo.png" class="img_logo" />
                         <table>
                             <tr><td><h3 style="margin: 0px;">Антипин</h3></td></tr>
                             <tr><td><h5>Анатолий Иванович</h5></td></tr>
@@ -23,7 +25,7 @@
                 <div class="author">
                     <table>
                         <tr><td><h3 style="margin: 0px;">Психолог-консультант</h3></td></tr>
-                        <tr><td><h5>Психологическое консультирование и коррекция</h5></td></tr>
+                        <tr><td><h4>Психологическое консультирование и коррекция</h4></td></tr>
                     </table>
                 </div>
             </div>
@@ -61,7 +63,7 @@
                         ?>">Контакты</a></li>
                 </ul>
             </div>
-            <div class="headerPic"><img src="../img/headerBackground.jpg" alt="Header picture" width="800" height="269" /></div>
+            <!--<div class="headerPic"><img src="../img/headerBackground.jpg" alt="Header picture" width="800" height="269" /></div>-->
             <!-- #mainContent -->
             <div id="mainContent">
                 <div class="copyrightTemplate">
@@ -88,6 +90,7 @@
 <script>
     $('.up').on('click', function() {
         $('html, body').animate({scrollTop: 0}, 'slow');
+        return false;
     });
 
 
