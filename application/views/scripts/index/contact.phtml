@@ -47,7 +47,7 @@
                 <b>E-mail: </b>
             </td>
             <td class="right"> 
-                psiholog-antipin@yandex.ru
+                antipin.psiholog@gmail.com
             </td>
         </tr>
 
@@ -63,3 +63,43 @@
         </tr>
     </table>
 </div>
+
+<script>
+    var params = {};
+    $('.set_order').click(function() {
+        $form = $('form');
+        if ($form.find('input[name=name]').val() == '') {
+            alert('Введите имя');
+            return false;
+        } else {
+            params.name = $form.find('input[name=name]').val();
+        }
+        if ($form.find('input[name=city]').val() == '') {
+            alert('Введите город');
+            return false;
+        } else {
+            params.city = $form.find('input[name=city]').val();
+        }
+        if ($form.find('input[name=phone]').val() == '') {
+            alert('Введите телефон');
+            return false;
+        } else {
+            params.phone = $form.find('input[name=phone]').val();
+        }
+        if ($form.find('input[name=then]').val() == '') {
+            alert('Введите время когда Вам позвонить');
+            return false;
+        } else {
+            params.then = $form.find('input[name=then]').val();
+        }
+        params.addtell = 1;
+        $.post('/index/tellorder/', params, function(data) {
+            $('.form_call').slideToggle();
+            $form.find('input[name]').val('');
+            alert('Спасибо, ваша заявка принята');
+        });
+
+        return false;
+    });
+
+</script>

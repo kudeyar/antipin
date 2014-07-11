@@ -26,12 +26,12 @@ a:hover {color:#343434;text-decoration:none}
 #navcontainer ul li a {font-size:18px; background-color:#151515; color:White; text-decoration:none; float:left; vertical-align:middle; padding:19px 40px}
 #navcontainer ul li a:hover {
     background: #176599;
-    border: .5px solid #295968;
+    border: 0px solid #295968;
     color:#fff
 }
 #navcontainer .active a {
     background: #176599;
-    border: .5px solid #295968;
+    border: 0px solid #295968;
     color:#fff
 }
 h1 {color:#6d6d6d;padding:0 0 10px 0}

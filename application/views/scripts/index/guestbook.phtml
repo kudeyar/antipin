@@ -38,8 +38,9 @@
         params.add = 1;
         $.get('/index/comments/add', params, function(data) {
             $('.comment-block').html(data);
+            $('.added').slideToggle().delay(3000).slideToggle();
         })
-        $('.added').slideToggle().delay(3000).slideToggle();
+        
         $('#username').val("");
         $('#usercomment').val("");
         $('html, body').animate({scrollTop: 0}, 'slow');
