@@ -3,13 +3,14 @@
 .fright  {float:right}
 .fcenter {float:none;margin:0 auto;width:96%}
 .fclear {clear:both}
-body {font-family:Arial,Helvetica,sans-serif;font-size:12px;background:#343434;color:#343434;
-      background-image: url(/img/background-photo.jpg);
+body {font-family:Arial,Helvetica,sans-serif;font-size:12px;
       background-position: center center;
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
+      color:#EBEBEB;
       background-color:#464646;
+      background-image:url(/img/background-photo.jpg);
 }
 
 @media only screen and (max-width: 767px) {
@@ -19,16 +20,18 @@ body {font-family:Arial,Helvetica,sans-serif;font-size:12px;background:#343434;c
 }
 
 a {color:#343434;text-decoration:underline}
-a:hover {color:#343434;text-decoration:none}
-#container {width:800px;margin:0 auto;background:#cfcec9}
-#header {background:#343434;height:80px;margin:10px 0 0 0}
+a:hover {text-decoration:none;color:#8EACDA;}
+#containerr {width:800px;margin:0 auto;background-color: rgba(41, 41, 41, 0.6);}
+#header { background-color: rgba(9, 6, 20, 0.6); height:80px;margin:10px 0 0 0; font-family: "Roboto";}
 #header a, #footer a {color:#fff}
 #header, #footer {color:#fff}
 .headerPic {width:800px;height:69px}
 .headerPic p {padding:20px}
-#footer {margin:10px 0;background:#151515;height:80px}
+.img_logo {width: 50px; display: inline;}
+#footer {margin:10px 0;height:80px; border-top: 1px solid; background-color: rgba(9, 6, 20, 0.6);}
 #footer p {text-align:center;padding-top:20px}
 .logo {float:left;margin:15px 10px 0 0;color:#FFF; padding: 0 10px;}
+.logo table {display: inline-block;}
 .logo table td {text-align: center;}
 .logo table td h3 {font-size: 16pt;}
 .logo table td h5 {font-size: 12pt;}
@@ -49,11 +52,12 @@ a:hover {color:#343434;text-decoration:none}
     color:#fff
 }
 h1 {color:#6d6d6d;padding:0 0 10px 0}
-.testimonials {float:left; width:330px; margin-left: 20px; border-right:1px solid #6a7b86; padding-right: 20px;}
-.meaning {float: right; padding-left:20px; margin-right: 10px;}
+.title_page{color: #DDDDDD;}
+.testimonials {float:left; width:330px; margin-left: 20px; padding-right: 20px; border-right: 1px solid #FFFFFF;}
+.meaning {float: right; padding-left:20px; margin-right: 10px;width:346px;}
 .clearer {clear:both}
 hr {border-top:1px solid #6a7b86;height:1px;margin:20px 0}
-#mainContent {padding-top:240px;margin:0 10px}
+#mainContent {padding-top:20px;margin:0 10px}
 .copyrightTemplate {display: block; position: relative; overflow: hidden; margin: 10px auto; width: 750px; padding: 20px; text-align: justify;}
 .copyrightTemplate .service_style a {
     color: #000;
@@ -64,22 +68,27 @@ hr {border-top:1px solid #6a7b86;height:1px;margin:20px 0}
 }
 
 #fam, #child, #ind, #trening, #help{
-    cursor: pointer;
-    border-bottom: 1px dotted;
     font-weight: bold;
     font-size: 12pt;
+    display: block;
+    text-align: center;
+    border-bottom: 1px dotted;
+}
+
+.item {
+    float: left;
 }
 
 .copyrightTemplate .service_style p {
-    text-indent: 20px; /* Отступ первой строки в пикселах */
-    display: block;
-    background: #E4E4E4;
+    display: inline-block;
+    background-color: rgba(9, 6, 20, 0.6);
     border: 1px solid #6d6d6d;
-    margin-left: 20px;
+    margin-left: 15px;
     margin-top: 5px;
     padding: 10px;
     font-size: 10pt;
     text-align: left;
+    width: 45%;
 }
 
 .index_title {
@@ -110,12 +119,13 @@ hr {border-top:1px solid #6a7b86;height:1px;margin:20px 0}
 }
 
 .schema1, 
-.schema2 {
-    color: #000;
+.schema2,
+.schema3{
     text-decoration: none;
     border-bottom: 1px dotted;
     cursor: pointer;
     font-size: 14pt;
+    color: #DBDBDB;
 }
 
 input, textarea, select, label {
@@ -131,7 +141,6 @@ input, textarea, select, label {
     margin: 10px auto;
     padding: 5px;
     width: 320px;
-    background: #E4E4E4;
     border: 1px solid #cfd5da;
     border-bottom-color: #ccd1d6;
     border-radius: 3px;
@@ -141,8 +150,8 @@ input, textarea, select, label {
 
 .contact-inner {
     padding: 25px;
-    background: #D5D5D5;
     border-radius: 2px;
+    background-color: rgba(41, 32, 75, 0.41);
 }
 
 .contact:before, .contact:after, .contact-inner:before, .contact-inner:after {
@@ -161,21 +170,21 @@ input, textarea, select, label {
 
 .contact:before {
     margin-top: 1px;
-    border-top-color: #d8e1e6;
+    /*border-top-color: rgba(41, 32, 75, 0.41);*/
 }
 
 .contact-inner:before {
-    border-top-color: #ccd1d6;
+    /*border-top-color: #ccd1d6;*/
 }
 
 .contact-inner:after {
     margin-top: -1px;
-    border-top-color: #E4E4E4;
+    /*border-top-color: #E4E4E4;*/
 }
 
 .contact:after {
     margin-top: -8px;
-    border-top-color: #D5D5D5;
+    /*border-top-color: #D5D5D5;*/
 }
 
 .contact-input {
@@ -256,16 +265,15 @@ input, textarea, select, label {
     margin-top: 20px;
 }
 
-.comment_author, .comment_text, .comment_date {
-    background: #e4e4e4;
+.comment_author, .comment_text, .comment_date {background-color:rgba(138, 138, 138, 0.6);
 }
 
 .comment_author
 {
-    border-bottom: 1px dotted #6d6d6d;
+    border-bottom: 1px dotted #FFFFFF;
     padding: 0px 0px 2px 0px;
     margin: 0px 0px 10px 0px;
-    color: #BE0C0C;
+    color: #FFFFFF;
     font-size: 13px;
     font-family: verdana, arial, times new roman;
     font-weight: bold;
@@ -273,21 +281,21 @@ input, textarea, select, label {
 .comment_text
 {
     margin-top: 10px;
-    border-top: 1px solid #6d6d6d;
-    border-left: 1px solid #6d6d6d;
-    border-right: 1px solid #6d6d6d;
+    border-top: 1px solid #FFFFFF;
+    border-left: 1px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF;
     padding: 5px 5px 5px 5px;
     width: 500px;
     margin: 5px auto 0;
 }
 .comment_date
 {
-    border-bottom: 1px solid #6d6d6d;
-    border-left: 1px solid #6d6d6d;
-    border-right: 1px solid #6d6d6d;
+    border-bottom: 1px solid #FFFFFF;
+    border-left: 1px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF;
     text-align: right;
     padding: 0px 5px 5px 5px;
-    color: #BE0C0C;
+    color: #FFFFFF;
     font-size: 12px;
     font-family: verdana, arial, times new roman;
     font-weight: bold;
@@ -308,7 +316,6 @@ input, textarea, select, label {
 
 .btn {
     border: 1px solid #295968;
-    background: #2980BB;
     padding: 5px 10px;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
@@ -319,11 +326,13 @@ input, textarea, select, label {
     text-decoration: none;
     vertical-align: middle;
     cursor: pointer;
+    background: rgba(41,128,186,0.5);
 }
 
 .avatar {
     float: left;
     margin: 10px;
+    width: 235px;
 }
 
 .about {
@@ -331,23 +340,17 @@ input, textarea, select, label {
 }
 
 .diplom {
-    background: #d6d6d6;
     display: block;
     width: 300px;
     padding: 10px;
     float: left;
     margin: 10px;
     text-align: center;
+    background-color: rgba(9,6,20,0.6);
 }
 
-.drama {
-    background: #d6d6d6;
-    display: block;
-    width: 300px;
-    padding: 10px;
-    float: left;
-    margin: 10px;
-    text-align: center;
+.in:hover {
+    cursor: pointer;
 }
 
 .ask {
@@ -364,4 +367,19 @@ input, textarea, select, label {
 
 .ask a:hover {
     color: darkblue;
+}
+
+#img_container {
+    position: absolute;
+    display: none;
+    left: 50%;
+    margin-left: -350px;
+    z-index: 999;
+    top: 100px;
+}
+
+.metrica {
+    padding-top: 20px;
+    padding-left: 400px;
+    display: none;
 }
