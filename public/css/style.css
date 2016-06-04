@@ -21,7 +21,7 @@ body {font-family:Arial,Helvetica,sans-serif;font-size:12px;
 
 a {color:#343434;text-decoration:underline}
 a:hover {text-decoration:none;color:#8EACDA;}
-#container {width:800px;margin:0 auto;background-color: rgba(41, 41, 41, 0.6);}
+#containerr {width:800px;margin:0 auto;background-color: rgba(41, 41, 41, 0.6);}
 #header { background-color: rgba(9, 6, 20, 0.6); height:80px;margin:10px 0 0 0; font-family: "Roboto";}
 #header a, #footer a {color:#fff}
 #header, #footer {color:#fff}
@@ -40,7 +40,7 @@ a:hover {text-decoration:none;color:#8EACDA;}
 #navcontainer {height:58px;}
 #navcontainer ul {padding-left:0;margin-left:0;background-color:#151515;color:White;float:left;width:100%; font-style: italic; font-family: Monotype Corsiva;}
 #navcontainer ul li {display:inline}
-#navcontainer ul li a {font-size:18px; background-color:#151515; color:White; text-decoration:none; float:left; vertical-align:middle; padding:19px 40px}
+#navcontainer ul li a {font-size:18px; background-color:#151515; color:White; text-decoration:none; float:left; vertical-align:middle; padding:19px 50px}
 #navcontainer ul li a:hover {
     background: #176599;
     border: 0px solid #295968;
@@ -54,7 +54,7 @@ a:hover {text-decoration:none;color:#8EACDA;}
 h1 {color:#6d6d6d;padding:0 0 10px 0}
 .title_page{color: #DDDDDD;}
 .testimonials {float:left; width:330px; margin-left: 20px; padding-right: 20px; border-right: 1px solid #FFFFFF;}
-.meaning {float: right; padding-left:20px; margin-right: 10px; width: 346px;}
+.meaning {float: right; padding-left:20px; margin-right: 10px;width:346px;}
 .clearer {clear:both}
 hr {border-top:1px solid #6a7b86;height:1px;margin:20px 0}
 #mainContent {padding-top:20px;margin:0 10px}
@@ -68,22 +68,27 @@ hr {border-top:1px solid #6a7b86;height:1px;margin:20px 0}
 }
 
 #fam, #child, #ind, #trening, #help{
-    cursor: pointer;
-    border-bottom: 1px dotted;
     font-weight: bold;
     font-size: 12pt;
+    display: block;
+    text-align: center;
+    border-bottom: 1px dotted;
+}
+
+.item {
+    float: left;
 }
 
 .copyrightTemplate .service_style p {
-    text-indent: 20px; /* Отступ первой строки в пикселах */
-    display: block;
+    display: inline-block;
     background-color: rgba(9, 6, 20, 0.6);
     border: 1px solid #6d6d6d;
-    margin-left: 20px;
+    margin-left: 15px;
     margin-top: 5px;
     padding: 10px;
     font-size: 10pt;
     text-align: left;
+    width: 45%;
 }
 
 .index_title {
@@ -114,7 +119,8 @@ hr {border-top:1px solid #6a7b86;height:1px;margin:20px 0}
 }
 
 .schema1, 
-.schema2 {
+.schema2,
+.schema3{
     text-decoration: none;
     border-bottom: 1px dotted;
     cursor: pointer;
@@ -326,6 +332,7 @@ input, textarea, select, label {
 .avatar {
     float: left;
     margin: 10px;
+    width: 250px;
 }
 
 .about {
@@ -342,14 +349,8 @@ input, textarea, select, label {
     background-color: rgba(9,6,20,0.6);
 }
 
-.drama {
-    background: #d6d6d6;
-    display: block;
-    width: 300px;
-    padding: 10px;
-    float: left;
-    margin: 10px;
-    text-align: center;
+.in:hover {
+    cursor: pointer;
 }
 
 .ask {
@@ -366,4 +367,19 @@ input, textarea, select, label {
 
 .ask a:hover {
     color: darkblue;
+}
+
+#img_container {
+    position: absolute;
+    display: none;
+    left: 50%;
+    margin-left: -350px;
+    z-index: 999;
+    top: 100px;
+}
+
+.metrica {
+    padding-top: 20px;
+    padding-left: 400px;
+    display: none;
 }

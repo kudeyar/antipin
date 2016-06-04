@@ -1,5 +1,5 @@
 <h2><font class="title_page">Обо мне</font></h2>
-<img src="../img/Fotogal.jpg" class="avatar">
+<div class="in"><img src="../img/antipin2.jpg" class="avatar"></div>
 <div class="about">
     <p>Антипин Анатолий Иванович, 1973 года рождения</p>
     <br />
@@ -23,22 +23,22 @@
 <br />
 <h4>Образование:</h4>
 
-<div class="diplom">
+<div class="diplom in">
     <img src="../img/diplom_terap.jpg" style="width: 300px;"><br />
     Психотерапевт по методу Символдрама
 </div>
 
-<div class="diplom">
+<div class="diplom in">
     <img src="../img/diplom_psiholog.jpg" style="width: 300px;"><br />
     Ставропольская государственная медицинская академия<br /> квалификация – медицинский психолог 
 </div>
 
-<div class="diplom">
+<div class="diplom in">
     <img src="../img/nlp.jpg" style="width: 300px;"><br />
     Практик нейролингвистического программирования
 </div>
 
-
+<div id="img_container"><img src="" width="700px"></div>
 
 
 
@@ -48,5 +48,29 @@
 <script>
     $.get('/index/contact/', function(data) {
         $('.contact-form').html(data);
+    });
+
+    $(document).ready(function() {
+
+// При клике на миниатюру
+        $('.in img').click(function()
+        {
+// Берем свойство SRC миниатюры
+// (можно картинку положить в ссылку и брать значение href
+// для того, чтобы не грузить большие картинки изначально
+// а загружать сначало миниатюры и только при клике открывать
+//  большое изображение, что будет целесообразнее).
+            var imgSrc = $(this).attr("src");
+// Задаем свойство SRC картинке, которая в скрытом диве.
+            $('#img_container img').attr({src: imgSrc});
+// Показываем скрытый контейнер
+            $('#img_container').fadeIn('slow');
+        });
+// По клику на большое изображение, скрываем его
+        $('#img_container').click(function()
+        {
+            $(this).fadeOut();
+        });
+
     });
 </script>
